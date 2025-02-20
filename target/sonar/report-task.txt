@@ -1,7 +1,0 @@
-organization=thakur-devops-workshop
-projectKey=thakur-devops-workshop_java-app
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.59867
-dashboardUrl=https://sonarcloud.io/dashboard?id=thakur-devops-workshop_java-app
-ceTaskId=AZUhxHHMtQCntlsmDUxe
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZUhxHHMtQCntlsmDUxe

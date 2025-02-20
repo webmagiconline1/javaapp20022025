@@ -8,21 +8,21 @@ pipeline {
         stage('Unit Test') {
             steps {
                 sh 'mvn test'
-                publishHTML([target: [
-                    reportDir: 'target/surefire-reports',
-                    reportFiles: 'index.html',
-                    reportName: 'Unit Test Report'
-                ]])
+                // publishHTML([target: [
+                //     reportDir: 'target/surefire-reports',
+                //     reportFiles: 'index.html',
+                //     reportName: 'Unit Test Report'
+                // ]])
             }
         }
         stage('Code Coverage') {
             steps {
                 sh 'mvn jacoco:report'
-                publishHTML([target: [
-                    reportDir: 'target/site/jacoco',
-                    reportFiles: 'index.html',
-                    reportName: 'Code Coverage Report'
-                ]])
+                // publishHTML([target: [
+                //     reportDir: 'target/site/jacoco',
+                //     reportFiles: 'index.html',
+                //     reportName: 'Code Coverage Report'
+                // ]])
             }
         }
         stage('SonarQube Analysis') {

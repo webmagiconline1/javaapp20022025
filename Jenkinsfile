@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        maven 'Maven_3.9.9'  // The name you gave your Maven installation
+    }
 
     stages {
         stage('Unit Test') {

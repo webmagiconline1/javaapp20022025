@@ -25,15 +25,15 @@ pipeline {
                 // ]])
             }
         }
-        stage('SonarQube Analysis') {
-            steps {
-                withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
-                    withSonarQubeEnv('SonarQube') {
-                        sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=thakur-devops-workshop_my-app -Dsonar.login=$SONAR_TOKEN'
-                    }
-                }
-            }
-        }
+        // stage('SonarQube Analysis') {
+        //     steps {
+        //         withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
+        //             withSonarQubeEnv('SonarQube') {
+        //                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=thakur-devops-workshop_my-app -Dsonar.login=$SONAR_TOKEN'
+        //             }
+        //         }
+        //     }
+        // }
         stage('Build') {
             steps {
                 sh 'mvn clean package'
